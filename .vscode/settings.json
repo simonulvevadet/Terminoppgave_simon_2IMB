@@ -12,7 +12,7 @@
             "password": "password",
             "database": "bike_workshop",
             "name": "bike_workshop",
-            "connectString": "Server=localhost;Database=bike_workshop;User Id=root;Password=<password>;"
+            "connectString": "Server=localhost;Database=bike_workshop;Username=root;Password=<password>;"
         }
     ],
     "liveServer.settings.port": 5501

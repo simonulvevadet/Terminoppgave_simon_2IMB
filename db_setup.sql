@@ -26,7 +26,6 @@ CREATE TABLE IF NOT EXISTS Repairs (
     description TEXT,
     total_price DECIMAL(10, 2),
     date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (mechanic_id) REFERENCES Mechanics(id) ON DELETE SET NULL
 );
 
 -- Opprett tabellen for reparasjonsdetaljer (hvilke produkter som ble brukt)
@@ -34,6 +33,4 @@ CREATE TABLE IF NOT EXISTS RepairDetails (
     repair_id INT,
     product_id INT,
     work TEXT,
-    FOREIGN KEY (repair_id) REFERENCES Repairs(id) ON DELETE CASCADE,
-    FOREIGN KEY (product_id) REFERENCES Products(id) ON DELETE CASCADE
 );

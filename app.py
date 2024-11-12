@@ -1,8 +1,11 @@
 # app.py (Flask backend)
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import mysql.connector
 
-app = Flask(__name__)
+app = Flask(__name__,
+            static_url_path='', 
+            static_folder='Static',
+            template_folder='Templates')
 
 # MySQL database connection i app.py
 db = mysql.connector.connect(
@@ -33,6 +36,10 @@ def get_repairs():
     cursor.execute("SELECT * FROM Repairs")
     repairs = cursor.fetchall()
     return jsonify(repairs)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
