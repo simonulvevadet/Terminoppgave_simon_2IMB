@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "driver": "MySQL",
+            "username": "root",
+            "password": "password",
+            "database": "bike_workshop",
+            "name": "bike_workshop",
+            "connectString": "Server=localhost;Database=bike_workshop;User Id=root;Password=<password>;"
+        }
+    ],
+    "liveServer.settings.port": 5501
+}

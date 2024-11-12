@@ -1,0 +1,56 @@
+body { 
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #8767d8;
+}
+
+h1 {
+    color: #000000;
+}
+
+form {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #90be6d; 
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #5a4e7c;
+}
+
+input {
+    padding: 8px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+button {
+    background-color: #47b101;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #73ff00;
+}
+
+#repairs {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #90be6d; 
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}

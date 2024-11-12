@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="no">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sykkelverksted System</title>
+    <link rel="stylesheet" href="../Static/Styles.css">
+</head>
+
+<body>
+    <h1>Velkommen til Bengs verksted System</h1>
+
+    <form id="repairForm">
+        <label for="mechanic">Mekaniker-ID:</label>
+        <input type="text" id="mechanic" name="mechanic_id" required>
+
+        <label for="description">Beskrivelse:</label>
+        <input type="text" id="description" name="description" required>
+
+        <label for="totalPrice">Totalpris:</label>
+        <input type="number" id="totalPrice" name="total_price" required>
+
+        <button type="submit">Legg til Reparasjon</button>
+    </form>
+
+    <div id="repairs">
+        <h2>Liste over reparasjoner</h2>
+        <!-- Reparasjoner blir lastet her -->
+    </div>
+
+    <script src="../Static/script.js"></script>
+</body>
+
+
+
+
+
+</html>
