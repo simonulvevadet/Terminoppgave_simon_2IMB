@@ -41,5 +41,9 @@ def get_repairs():
 def home():
     return render_template('index.html')
 
+@app.route('/search.html')
+def search():
+    return render_template('search.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
