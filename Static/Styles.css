@@ -1,17 +1,17 @@
 body { 
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #8767d8;
+    background-color: #d9d9d9;
 }
 
 h1 {
-    color: #000000;
+    color: #1a1a1a;
 }
 
 form {
     margin-bottom: 20px;
     padding: 15px;
-    background-color: #90be6d; 
+    background-color: #e0e0e0;
     border-radius: 8px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
@@ -20,7 +20,7 @@ label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: #5a4e7c;
+    color: #2e2e2e;
 }
 
 input {
@@ -28,14 +28,14 @@ input {
     width: 100%;
     margin-top: 5px;
     margin-bottom: 15px;
-    border: 1px solid #000000;
+    border: 1px solid #666666;
     border-radius: 4px;
     background-color: #ffffff;
 }
 
 button {
-    background-color: #47b101;
-    color: rgb(0, 0, 0);
+    background-color: #3b5ab4;
+    color: #ffffff;
     padding: 10px;
     border: none;
     border-radius: 4px;
@@ -44,13 +44,13 @@ button {
 }
 
 button:hover {
-    background-color: #73ff00;
+    background-color: #334a94;
 }
 
 #repairs {
     margin-top: 20px;
     padding: 15px;
-    background-color: #90be6d; 
+    background-color: #e0e0e0;
     border-radius: 8px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
