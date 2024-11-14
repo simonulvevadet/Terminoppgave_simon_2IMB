@@ -2,11 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search</title>
-    <link rel="stylesheet" href="Styles.css">
+    <title>Product Search</title>
 </head>
 <body>
-    
+    <h1>Search Products</h1>
+    <form method="post" action="/search">
+        <input type="text" name="search_query" placeholder="Enter product name or 'all' to view all">
+        <button type="submit">Search</button>
+    </form>
+    <hr>
+    {% if data %}
+        <h2>Search Results:</h2>
+        <ul>
+            {% for item in data %}
+                <li><strong>{{ item['name'] }}</strong>: {{ item['description'] }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
 </body>
 </html>
