@@ -34,7 +34,7 @@ input {
 }
 
 button {
-    background-color: #3b5ab4;
+    background-color: #F08C3B;
     color: #ffffff;
     padding: 10px;
     border: none;
@@ -44,7 +44,7 @@ button {
 }
 
 button:hover {
-    background-color: #334a94;
+    background-color: #F08C3B;
 }
 
 #repairs {
