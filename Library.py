@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, redirect, url_for
 import mysql.connector
 
 app = Flask(__name__,
@@ -8,32 +8,56 @@ app = Flask(__name__,
 
 # MySQL database connection 
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="password",
+    host="localhost",       
+    user="root",            
+    password="password",    
     database="bike_workshop"
 )
-cursor = db.cursor(dictionary=True)  # Enable dictionary mode to get results as dictionaries
+cursor = db.cursor(dictionary=True)
 
 # Endpoint for search
 @app.route('/search', methods=['GET', 'POST'])
 def search():
-    data = None  # Initialize data variable
     if request.method == "POST":
-        search_query = request.form.get('search_query')  # Retrieve the search query from the form
-        
+        product = request.form['product']
         # Search by product name or description
-        query = "SELECT name, description FROM Products WHERE name LIKE %s OR description LIKE %s"
-        cursor.execute(query, (f"%{search_query}%", f"%{search_query}%"))
+        query = "SELECT name, description, price FROM Products WHERE name LIKE %s OR description LIKE %s"
+        cursor.execute(query, (f"%{product}%", f"%{product}%"))
         data = cursor.fetchall()
-        
-        # If no results and 'all' is entered, return all products
-        if len(data) == 0 and search_query.lower() == 'all': 
-            cursor.execute("SELECT name, description FROM Products")
+
+        # If "all" is in the search box, retrieve all records
+        if len(data) == 0 and product.lower() == 'all': 
+            cursor.execute("SELECT name, description, price FROM Products")
             data = cursor.fetchall()
+
+        return render_template('search.html', data=data)
     
-    # Render the search template with the results (or none if no search has been made yet)
-    return render_template('search.html', data=data)
+    return render_template('search.html')
+
+# Endpoint for inserting a new product
+@app.route('/insert', methods=['GET', 'POST'])
+def insert():
+    if request.method == "POST":
+        # Retrieve form data
+        name = request.form['name']
+        description = request.form['description']
+        price = request.form['price']
+
+        # Insert the new product into the Products table
+        query = "INSERT INTO Products (name, description, price) VALUES (%s, %s, %s)"
+        cursor.execute(query, (name, description, price))
+        db.commit()
+
+        # Redirect to search page after inserting
+        return redirect(url_for('search'))
+
+    return render_template('insert.html')
+
+# Close the cursor and connection when the app shuts down
+@app.teardown_appcontext
+def close_connection(exception):
+    cursor.close()
+    db.close()
 
 if __name__ == '__main__':
     app.debug = True
