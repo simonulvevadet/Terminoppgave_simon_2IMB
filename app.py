@@ -16,6 +16,18 @@ db = mysql.connector.connect(
 )
 
 
+@app.route('/search_query', methods=['POST'])
+def search_query():
+    data = request.get_json()
+    search = data['search']
+    search = int(search)
+    
+    cursor = db.cursor(dictionary=True)
+    query = "SELECT * FROM Repairs WHERE id = %s"
+    cursor.execute(query, (search))
+    results = cursor.fetchall()
+    return jsonify(results)
+
 @app.route('/add_repair', methods=['POST'])
 def add_repair():
     data = request.get_json()

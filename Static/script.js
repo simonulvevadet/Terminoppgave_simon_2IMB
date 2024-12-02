@@ -39,3 +39,19 @@ async function loadRepairs() {
 
 // Last inn reparasjoner når siden lastes
 window.onload = loadRepairs;
+
+async function searchDatabase(search) {
+    const resultatContainer = document.getElementById("search-resultat");
+
+    // Send en POST-forespørsel til backend for å sende search
+    const response = await fetch('/search_query', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            search : search
+        })
+    });
+
+    const result = await response.json();
+    alert(result.message);  // Vis suksessmelding
+}
