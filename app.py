@@ -9,9 +9,9 @@ app = Flask(__name__,
 
 # MySQL database connection i app.py
 db = mysql.connector.connect(
-    host="localhost",       # Standard MySQL host navn
-    user="root",            # MySQL brukernavn 
-    password="password",    # MySQL passord 
+    host="localhost", # Standard MySQL host navn
+    user="root", # MySQL brukernavn 
+    password="password", # MySQL passord 
     database="bike_workshop" # Navn på databasen
 )
 
