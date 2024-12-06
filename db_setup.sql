@@ -34,3 +34,4 @@ CREATE TABLE IF NOT EXISTS RepairDetails (
     product_id INT,
     work TEXT,
 );
+    

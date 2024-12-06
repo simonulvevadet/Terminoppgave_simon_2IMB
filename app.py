@@ -59,3 +59,24 @@ def search():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
+    
+@app.route('/delete_repair', methods=['POST'])  # Sørg for at denne matcher
+def delete_repair():
+    print("stempel1")
+    repair_id = data['repairId']
+    print("stempel2")
+    print(repair_id)
+    data = request.get_json()
+    cursor = db.cursor()
+    query = "DELETE FROM Repairs WHERE id = %s"
+    print(query)
+    cursor.execute(query, (repair_id,))
+    db.commit()
+    return jsonify({"message": f"Repair with ID {repair_id} deleted successfully"}), 200
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
