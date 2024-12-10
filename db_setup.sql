@@ -4,14 +4,14 @@ CREATE DATABASE IF NOT EXISTS bike_workshop;
 -- Bruk databasen
 USE bike_workshop;
 
--- Opprett tabellen for mekanikere
+-- Opprett tabellen for mekanikere (Ikke i bruk enda!)
 CREATE TABLE IF NOT EXISTS Mechanics (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     phone_number VARCHAR(20)
 );
 
--- Opprett tabellen for produkter
+-- Opprett tabellen for produkter (Ikke i bruk enda!)
 CREATE TABLE IF NOT EXISTS Products (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -25,13 +25,13 @@ CREATE TABLE IF NOT EXISTS Repairs (
     mechanic_id INT,
     description TEXT,
     total_price DECIMAL(10, 2),
-    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-);
+    );
 
--- Opprett tabellen for reparasjonsdetaljer (hvilke produkter som ble brukt)
+-- Opprett tabellen for reparasjonsdetaljer (hvilke produkter som ble brukt)(Ikke i bruk enda!)
 CREATE TABLE IF NOT EXISTS RepairDetails (
     repair_id INT,
     product_id INT,
-    work TEXT,
+    work TEXT
 );
+
     
