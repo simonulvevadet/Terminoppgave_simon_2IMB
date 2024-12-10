@@ -1,64 +1,71 @@
+# Importer nødvendige moduler fra Flask for å lage en webapplikasjon
 from flask import Flask, jsonify, request, render_template, redirect, url_for
+# Importer MySQL-connector for å kommunisere med en MySQL-database
 import mysql.connector
 
+# Opprett en instans av Flask-klassen for webapplikasjonen
 app = Flask(__name__,
-            static_url_path='', 
-            static_folder='Static',
-            template_folder='Templates')
+            static_url_path='',  # Angir URL-sti for statiske filer (f.eks. CSS, JS, bilder)
+            static_folder='Static',  # Mappe for statiske filer
+            template_folder='Templates')  # Mappe for HTML-malene
 
-# MySQL database connection 
+# Oppsett for tilkobling til MySQL-databasen
 db = mysql.connector.connect(
-    host="localhost",       
-    user="root",            
-    password="password",    
-    database="bike_workshop"
+    host="localhost",       # Vert der MySQL-databasen kjører
+    user="root",            # MySQL-brukernavn
+    password="password",    # MySQL-passord
+    database="bike_workshop"  # Navnet på databasen som skal kobles til
 )
+
+# Opprett en cursor for å utføre SQL-spørringer og hente resultater som ordbøker
 cursor = db.cursor(dictionary=True)
 
-# Endpoint for search
+# Definer ruten og funksjonen for søke-endepunktet
 @app.route('/search', methods=['GET', 'POST'])
 def search():
-    if request.method == "POST":
-        product = request.form['product']
-        # Search by product name or description
+    if request.method == "POST":  # Hvis forespørselen er POST (når brukeren sender inn skjemaet)
+        product = request.form['product']  # Hent produktnavnet fra søkeskjemaet
+        
+        # SQL-spørring for å søke i Products-tabellen etter navn eller beskrivelse
         query = "SELECT name, description, price FROM Products WHERE name LIKE %s OR description LIKE %s"
-        cursor.execute(query, (f"%{product}%", f"%{product}%"))
-        data = cursor.fetchall()
+        cursor.execute(query, (f"%{product}%", f"%{product}%"))  # Utfør spørringen med søketermene
+        data = cursor.fetchall()  # Hent alle matchende poster
 
-        # If "all" is in the search box, retrieve all records
+        # Hvis ingen resultater og brukeren har søkt på 'all', hent alle poster
         if len(data) == 0 and product.lower() == 'all': 
             cursor.execute("SELECT name, description, price FROM Products")
-            data = cursor.fetchall()
+            data = cursor.fetchall()  # Hent alle produkter hvis 'all' ble søkt på
 
-        return render_template('search.html', data=data)
+        return render_template('search.html', data=data)  # Render søkesiden med data
     
-    return render_template('search.html')
+    return render_template('search.html')  # Render søkesiden ved GET-forespørsel (første last)
 
-# Endpoint for inserting a new product
+# Definer ruten og funksjonen for å legge til et nytt produkt
 @app.route('/insert', methods=['GET', 'POST'])
 def insert():
-    if request.method == "POST":
-        # Retrieve form data
+    if request.method == "POST":  # Hvis forespørselen er POST (når brukeren sender inn skjemaet)
+        # Hent skjema-data for det nye produktet
         name = request.form['name']
         description = request.form['description']
         price = request.form['price']
 
-        # Insert the new product into the Products table
+        # SQL-spørring for å sette inn det nye produktet i Products-tabellen
         query = "INSERT INTO Products (name, description, price) VALUES (%s, %s, %s)"
-        cursor.execute(query, (name, description, price))
-        db.commit()
+        cursor.execute(query, (name, description, price))  # Utfør spørringen med skjema-data
+        db.commit()  # Bekreft transaksjonen til databasen
 
-        # Redirect to search page after inserting
+        # Viderekoble til søkesiden etter at produktet er lagt til
         return redirect(url_for('search'))
 
-    return render_template('insert.html')
+    return render_template('insert.html')  # Render innsettingssiden for GET-forespørsler
 
-# Close the cursor and connection when the app shuts down
+# Lukk databasen og cursor når appen stenges
 @app.teardown_appcontext
 def close_connection(exception):
-    cursor.close()
-    db.close()
+    cursor.close()  # Lukk cursor
+    db.close()  # Lukk databasen
 
+# Kjør appen når skriptet kjøres
 if __name__ == '__main__':
-    app.debug = True
-    app.run()
+    app.debug = True  # Aktiver feilsøkingsmodus for enklere feilsøking under utvikling
+    app.run()  # Start Flask-utviklingsserveren

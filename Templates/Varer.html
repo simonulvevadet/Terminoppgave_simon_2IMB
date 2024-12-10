@@ -1,62 +1,14 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sykkelverksted Prisliste</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        #search {
-            margin-bottom: 20px;
-            padding: 10px;
-            width: 100%;
-            max-width: 400px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-        tr:hover {
-            background-color: #f9f9f9;
-        }
-    </style>
-    <script>
-        function searchTable() {
-            const input = document.getElementById("search");
-            const filter = input.value.toLowerCase();
-            const table = document.getElementById("priceTable");
-            const rows = table.getElementsByTagName("tr");
-
-            for (let i = 1; i < rows.length; i++) {
-                const cells = rows[i].getElementsByTagName("td");
-                let match = false;
-                for (let j = 0; j < cells.length; j++) {
-                    if (cells[j].textContent.toLowerCase().includes(filter)) {
-                        match = true;
-                        break;
-                    }
-                }
-                rows[i].style.display = match ? "" : "none";
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="../Static/StylesVarer.css">
 </head>
+
+
 <body>
     <h1>Sykkelverksted Prisliste</h1>
     <input type="text" id="search" onkeyup="searchTable()" placeholder="Søk etter reparasjoner...">
@@ -108,7 +60,260 @@
                 <td>Installering av lys</td>
                 <td>100</td>
             </tr>
+            <tr>
+                <td>Bytte av kranklager</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>Bytte av hjulaksling</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <td>Justering av bremsekalipper</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Bytte av girwire</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Skifte av styr</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>Bytte av setepinne</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Bytte av styrelager</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>Skifte av bremseklosser</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Justering av nav</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Bytte av krankarm</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>Bytte av kassetter</td>
+                <td>350</td>
+            </tr>
+            <tr>
+                <td>Skifte av hjulfelg</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td>Bytte av svinghjul på el-sykkel</td>
+                <td>700</td>
+            </tr>
+            <tr>
+                <td>Installasjon av ny styrestem</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <td>Bytte av bremseslange</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Rens av girsystem</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <td>Bytte av bremsesystem (hydraulisk)</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td>Montering av sykkelstativ</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Bytte av bremsevæske</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Bytte av hjulene (fullt sett)</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Bytte av aksling i navet</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Bytte av girskifter</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>Skifte av dekk på el-sykkel</td>
+                <td>350</td>
+            </tr>
+            <tr>
+                <td>Justering av eiker</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Bytte av sete</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Justering av girspake</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Skifte av sykkelsadel</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Montering av refleks</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Bytte av bremsehendel</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <td>Justering av kranksett</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Skifte av bremsekaliper (hydraulisk)</td>
+                <td>450</td>
+            </tr>
+            <tr>
+                <td>Bytte av bremseveske (el-sykkel)</td>
+                <td>350</td>
+            </tr>
+            <tr>
+                <td>Bytte av pedalarm</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Bytte av elektrisk motor på el-sykkel</td>
+                <td>3000</td>
+            </tr>
+            <tr>
+                <td>Justering av kjedespenn</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Bytte av gaffel</td>
+                <td>800</td>
+            </tr>
+            <tr>
+                <td>Skifte av elektrisk bremsesystem (el-sykkel)</td>
+                <td>1500</td>
+            </tr>
+            <tr>
+                <td>Bytte av hjuloppheng (suspensjon)</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Bytte av dekkventil</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Installasjon av sykkelcomputere</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Bytte av refleksbånd</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Rens av bremseklosser</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Skifte av felg på el-sykkel</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td>Skifte av styrbånd (for landeveissykkel)</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Justering av ståhåndtak</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Reparasjon av elektrisk ledning (el-sykkel)</td>
+                <td>350</td>
+            </tr>
+            <tr>
+                <td>Rens av hjulnav</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <td>Bytte av skjerm</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Bytte av girsystem på el-sykkel</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Skifte av motorbatteri på el-sykkel</td>
+                <td>2500</td>
+            </tr>
+            <tr>
+                <td>Skifte av girkassett (el-sykkel)</td>
+                <td>450</td>
+            </tr>
+            <tr>
+                <td>Bytte av batteri til sykkelcomputer</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Reparasjon av elektrisk system (el-sykkel)</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Justering av bremseheis</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Bytte av stålbremse</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Bytte av skivebremse</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>Bytte av sykkelspake</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Rens av sykkelkjede</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Installasjon av sykkelbelysning (bak/foran)</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>Bytte av lås</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <td>Justering av hjuloppheng</td>
+                <td>250</td>
+            </tr>
+            <tr>
+                <td>Bytte av styrelager</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Skifte av kjedeplate</td>
+                <td>200</td>
+            </tr>
         </tbody>
     </table>
 </body>
+<script src="../Static/script.js"></script>
 </html>
