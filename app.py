@@ -52,6 +52,14 @@ def get_repairs():
 def home():
     return render_template('index.html')  # Render HTML-filen 'index.html'.
 
+@app.route('/Insert.html')
+def insert():
+    return render_template('Insert.html')
+
+@app.route('/Varer.html')
+def varer():
+    return render_template('Varer.html')
+
 @app.route('/search.html')  # Definerer en rute for '/search.html'.
 def search():
     return render_template('search.html')  # Render HTML-filen 'search.html'.
