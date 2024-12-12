@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS Mechanics (  -- Oppretter tabellen 'Mechanics' hvis d
 -- Opprett tabellen for produkter (Ikke i bruk enda!)
 CREATE TABLE IF NOT EXISTS Products (  -- Oppretter tabellen 'Products' hvis den ikke allerede eksisterer.
     id INT AUTO_INCREMENT PRIMARY KEY,  -- Primærnøkkel med automatisk inkrement for unik ID.
-    name VARCHAR(100) NOT NULL,  -- Produktnavn-kolonnen, som krever en streng på opptil 100 tegn.
+    name VARCHAR(255) NOT NULL,  -- Produktnavn-kolonnen, som krever en streng på opptil 100 tegn.
     description TEXT,  -- Beskrivelse-kolonnen, som kan lagre lengre tekst.
     price DECIMAL(10, 2)  -- Pris-kolonnen, som lagrer desimaltall med opptil 10 sifre og 2 desimaler.
 );

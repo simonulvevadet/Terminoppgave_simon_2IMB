@@ -5,13 +5,18 @@
     <meta charset="UTF-8"> <!-- Angir tegnsettet som UTF-8 for å støtte spesialtegn. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Gjør siden responsiv for ulike skjermstørrelser. -->
-    <title>Sykkelverksted System</title> <!-- Tittelen som vises i nettleserfanen. -->
+    <title>Bengs Bikes</title> <!-- Tittelen som vises i nettleserfanen. -->
+    <link rel="icon" href="{{ url_for('static', filename='media/Bengs_bikes.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="Styles.css"> <!-- Kobler til en ekstern CSS-fil. -->
 </head>
 
 <body>
     <header>
-        <h1>Velkommen til mitt verksted System</h1> <!-- Hovedoverskrift på siden. -->
+        <div class="container">
+            <img src="{{ url_for('static', filename='media/Bengs_bikes.png') }}" alt="Beng's Bikes" width="15%">
+          </div>
+          
+        <h1>Velkommen til Bengs Bikes</h1> <!-- Hovedoverskrift på siden. -->
         <nav> <!-- Navigasjonsmeny -->
             <ul>
                 <li><a href="/" class="button-89" role="button">
@@ -26,6 +31,7 @@
         </nav>
     </header>
 
+
     <form id="repairForm"> <!-- Skjema for å legge til reparasjoner. -->
         <label for="mechanic">Mekaniker-ID:</label> <!-- Etikett for mekaniker-ID. -->
         <input type="text" id="mechanic" name="mechanic_id" required> <!-- Inputfelt for mekaniker-ID, påkrevd. -->
@@ -35,7 +41,7 @@
 
         <label for="totalPrice">Totalpris:</label> <!-- Etikett for totalpris. -->
         <input type="number" id="totalPrice" name="total_price" required> <!-- Inputfelt for totalpris, påkrevd. -->
-        <button type="submit">Legg til Reparasjon</button> <!-- Knapp for å sende inn skjemaet. -->
+        <button type="submit" class="button-89" class="">Legg til Reparasjon</button> <!-- Knapp for å sende inn skjemaet. -->
     </form>
 
     <div id="repairs">

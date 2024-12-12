@@ -1,7 +1,8 @@
 body {
   font-family: Arial, sans-serif; /* Setter fonten til Arial, med sans-serif som fallback. */
-  margin: 20px; /* Legger til en margin rundt hele siden. */
+  margin: 2%; /* Legger til en margin rundt hele siden. */
   background-color: #d9d9d9; /* Setter bakgrunnsfargen til en lys grå. */
+
 }
 
 h1 {
@@ -119,3 +120,16 @@ nav li {
   font-family: serif; /* Bruker serif-font for 'youarehere'-klassen. */
   color: #f08c3b; /* Setter fargen til oransje for å indikere gjeldende posisjon. */
 }
+
+.Logo {
+  display: flex;
+  justify-content: center;  /* Horizontally centers the image */
+  align-items: center;      /* Vertically centers the image */
+          /* Optional: Ensures the container takes up full viewport height */
+}
+
+img {
+  max-width: 100%;  /* Optional: Makes the image responsive */
+  height: auto;
+}
+
