@@ -11,7 +11,16 @@
 </head>
 
 <body>
-    <h1>Velkommen til mitt verksted System</h1>
+    <header> 
+        <h1>Velkommen til mitt verksted System</h1>
+        <nav>
+        <ul>
+            <li><a href="/" class="button-89" role="button"><p class="youarehere">Hjem</p></a></li>
+            <li><a href="Insert.html" class="button-89" role="button">Legg til varer</a></li>
+            <li><a href="Varer.html" class="button-89" role="button">Se varer</a></li>
+            <li><a href="search.html" class="button-89" role="button">Søk</a></li>
+        </ul>
+    </nav></header>
 
     <form id="repairForm">
         <label for="mechanic">Mekaniker-ID:</label>
@@ -25,22 +34,8 @@
         <button type="submit">Legg til Reparasjon</button>
     </form>
 
-    <div class="Redigeringsknapper">
-        <button onclick="window.location.href = 'search.html'">Søk</button>
-        <button onclick="window.location.href = 'index.html'">Hjem</button>
-        <button onclick="window.location.href = 'Insert.html'">Legg til varer</button>
-        <button onclick="window.location.href = 'Varer.html'">Varer</button>
-        
-    </div>
 
-    <nav>
-        <ul>
-            <li><a href="search.html">Søk</a></li>
-            <li><a href="/">Hjem</a></li>
-            <li><a href="Insert.html">Legg til varer</a></li>
-            <li><a href="Varer.html">Se varer</a></li>
-        </ul>
-    </nav>
+    
 
         <div id="repairs">
             <h2>Liste over reparasjoner</h2>

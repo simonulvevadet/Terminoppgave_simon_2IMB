@@ -4,10 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Product Search</title>
-    <link rel="stylesheet" href="../Static/Styles.css">
+    <link rel="stylesheet" href="Styles.css">
 </head>
 
 <body>
+    <header>    <nav>
+        <ul>
+            <li><a href="/" class="button-89" role="button">Hjem</a></li>
+            <li><a href="Insert.html" class="button-89" role="button">Legg til varer</a></li>
+            <li><a href="Varer.html" class="button-89" role="button">Se varer</a></li>
+            <li><a href="search.html" class="button-89" role="button"><p class="youarehere">Søk</p></a></li>
+        </ul>
+    </nav></header>
     <h1>Search Products</h1>
     <input type="text" name="search_query" oninput="searchDatabase(this.value)"
         placeholder="Enter product name or 'all' to view all">
@@ -15,11 +23,6 @@
 
     </table>
 
-
-    <li><a href="search.html">Søk</a></li>
-    <li><a href="/">Hjem</a></li>
-    <li><a href="Insert.html">Legg til varer</a></li>
-    <li><a href="Varer.html">Se varer</a></li>
 
 </body>
 <script src="script.js"></script>

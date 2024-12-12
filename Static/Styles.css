@@ -1,56 +1,121 @@
-body { 
-    font-family: Arial, sans-serif;  /* Setter fonten til Arial, med sans-serif som fallback. */
-    margin: 20px;  /* Legger til en margin rundt hele siden. */
-    background-color: #d9d9d9;  /* Setter bakgrunnsfargen til en lys grå. */
+body {
+  font-family: Arial, sans-serif; /* Setter fonten til Arial, med sans-serif som fallback. */
+  margin: 20px; /* Legger til en margin rundt hele siden. */
+  background-color: #d9d9d9; /* Setter bakgrunnsfargen til en lys grå. */
 }
 
 h1 {
-    color: #1a1a1a;  /* Setter fargen på overskrifter (h1) til en mørk grå. */
+  color: #1a1a1a; /* Setter fargen på overskrifter (h1) til en mørk grå. */
 }
 
 form {
-    margin-bottom: 20px;  /* Legger til mellomrom under skjemaet. */
-    padding: 15px;  /* Legger til polstring rundt innholdet i skjemaet. */
-    background-color: #e0e0e0;  /* Setter en lys grå bakgrunn for skjemaet. */
-    border-radius: 8px;  /* Gjør hjørnene avrundede med en radius på 8px. */
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);  /* Legger til en skyggeeffekt rundt skjemaet. */
+  margin-bottom: 20px; /* Legger til mellomrom under skjemaet. */
+  padding: 15px; /* Legger til polstring rundt innholdet i skjemaet. */
+  background-color: #e0e0e0; /* Setter en lys grå bakgrunn for skjemaet. */
+  border-radius: 8px; /* Gjør hjørnene avrundede med en radius på 8px. */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Legger til en skyggeeffekt rundt skjemaet. */
 }
 
 label {
-    display: block;  /* Sørger for at etikettene vises på egne linjer. */
-    margin-top: 10px;  /* Legger til avstand over etikettene. */
-    font-weight: bold;  /* Gjør teksten fet. */
-    color: #2e2e2e;  /* Setter tekstfargen til en mørk grå. */
+  display: block; /* Sørger for at etikettene vises på egne linjer. */
+  margin-top: 10px; /* Legger til avstand over etikettene. */
+  font-weight: bold; /* Gjør teksten fet. */
+  color: #2e2e2e; /* Setter tekstfargen til en mørk grå. */
 }
 
 input {
-    padding: 8px;  /* Legger til polstring inni inputfeltet. */
-    width: 100%;  /* Gjør inputfeltet så bredt som mulig innenfor containeren. */
-    margin-top: 5px;  /* Legger til avstand mellom etiketten og inputfeltet. */
-    margin-bottom: 15px;  /* Legger til avstand mellom inputfeltet og neste element. */
-    border: 1px solid #666666;  /* Setter en grå kant rundt inputfeltet. */
-    border-radius: 4px;  /* Gjør kantene på inputfeltet avrundede. */
-    background-color: #ffffff;  /* Setter bakgrunnsfargen til hvit. */
+  padding: 8px; /* Legger til polstring inni inputfeltet. */
+  width: 100%; /* Gjør inputfeltet så bredt som mulig innenfor containeren. */
+  margin-top: 5px; /* Legger til avstand mellom etiketten og inputfeltet. */
+  margin-bottom: 15px; /* Legger til avstand mellom inputfeltet og neste element. */
+  border: 1px solid #666666; /* Setter en grå kant rundt inputfeltet. */
+  border-radius: 4px; /* Gjør kantene på inputfeltet avrundede. */
+  background-color: #ffffff; /* Setter bakgrunnsfargen til hvit. */
 }
 
 button {
-    background-color: #F08C3B;  /* Setter bakgrunnsfargen til en oransje farge. */
-    color: #ffffff;  /* Gjør teksten på knappen hvit. */
-    padding: 10px;  /* Legger til polstring inni knappen. */
-    border: none;  /* Fjerner kantlinjen rundt knappen. */
-    border-radius: 4px;  /* Gjør kantene på knappen avrundede. */
-    cursor: pointer;  /* Endrer musepekeren til en hånd ved hover. */
-    transition: background-color 0.3s ease;  /* Legger til en jevn overgangseffekt for bakgrunnsfargen. */
+  background-color: #f08c3b; /* Setter bakgrunnsfargen til en oransje farge. */
+  color: #ffffff; /* Gjør teksten på knappen hvit. */
+  padding: 10px; /* Legger til polstring inni knappen. */
+  border: none; /* Fjerner kantlinjen rundt knappen. */
+  border-radius: 4px; /* Gjør kantene på knappen avrundede. */
+  cursor: pointer; /* Endrer musepekeren til en hånd ved hover. */
+  transition: background-color 0.3s ease; /* Legger til en jevn overgangseffekt for bakgrunnsfargen. */
 }
 
 button:hover {
-    background-color: #F08C3B;  /* Endrer bakgrunnsfargen ved hover (men er den samme som standard). */
+  background-color: #f08c3b; /* Endrer bakgrunnsfargen ved hover (men er den samme som standard). */
 }
 
 #repairs {
-    margin-top: 20px;  /* Legger til mellomrom over reparasjonsdiven. */
-    padding: 15px;  /* Legger til polstring inni containeren. */
-    background-color: #e0e0e0;  /* Setter en lys grå bakgrunn for reparasjonsdiven. */
-    border-radius: 8px;  /* Gjør hjørnene avrundede med en radius på 8px. */
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);  /* Legger til en skyggeeffekt rundt containeren. */
+  margin-top: 20px; /* Legger til mellomrom over reparasjonsdiven. */
+  padding: 15px; /* Legger til polstring inni containeren. */
+  background-color: #e0e0e0; /* Setter en lys grå bakgrunn for reparasjonsdiven. */
+  border-radius: 8px; /* Gjør hjørnene avrundede med en radius på 8px. */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Legger til en skyggeeffekt rundt containeren. */
+}
+
+/* Button-89 styles */
+.button-89 {
+  --b: 3px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  --color: #f08c3b;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+  text-decoration: none; /* Remove underline for links */
+  display: inline-block; /* Ensure proper spacing in inline elements */
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+/* Optional: Style the list to match button layout */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1em;
+}
+
+nav li {
+  display: inline;
+}
+
+.button-89{
+    color: #1a1a1a;
+    font-family:serif ;
+}
+
+.youarehere{
+    font-family: serif;
+    color: #f08c3b;
 }
