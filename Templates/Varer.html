@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +11,11 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+
         h1 {
             text-align: center;
         }
+
         #search {
             margin-bottom: 20px;
             padding: 10px;
@@ -21,18 +24,23 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
         }
-        th, td {
+
+        th,
+        td {
             padding: 10px;
             text-align: left;
             border: 1px solid #ddd;
         }
+
         th {
             background-color: #f4f4f4;
         }
+
         tr:hover {
             background-color: #f9f9f9;
         }
@@ -58,22 +66,28 @@
         }
     </script>
 </head>
+
 <body>
-    <header>    <nav>
-        <ul>
-            <li><a href="/" class="button-89" role="button">Hjem</a></li>
-            <li><a href="Insert.html" class="button-89" role="button">Legg til varer</a></li>
-            <li><a href="Varer.html" class="button-89" role="button"><p class="youarehere"></p><p class="youarehere">Se Varer</p></a></li>
-            <li><a href="search.html" class="button-89" role="button">Søk</a></li>
-        </ul>
-    </nav></header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" class="button-89" role="button">Hjem</a></li>
+                <li><a href="Insert.html" class="button-89" role="button">Legg til varer</a></li>
+                <li><a href="Varer.html" class="button-89" role="button">
+                        <p class="youarehere"></p>
+                        <p class="youarehere">Se Varer</p>
+                    </a></li>
+                <li><a href="search.html" class="button-89" role="button">Søk</a></li>
+            </ul>
+        </nav>
+    </header>
     <h1>Sykkelverksted Prisliste</h1>
     <input type="text" id="search" onkeyup="searchTable()" placeholder="Søk etter reparasjoner...">
     <table id="priceTable">
-            <tr>
-                <th>Reparasjon</th>
-                <th>Pris (NOK)</th>
-            </tr>
+        <tr>
+            <th>Reparasjon</th>
+            <th>Pris (NOK)</th>
+        </tr>
         </thead>
         <tbody>
             <tr>
@@ -376,4 +390,5 @@
 
 </body>
 <script src="../Static/script.js"></script>
+
 </html>

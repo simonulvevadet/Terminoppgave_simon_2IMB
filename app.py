@@ -50,17 +50,17 @@ def get_repairs():
 
 @app.route('/')  # Definerer rot-ruten ('/') for applikasjonen.
 def home():
-    return render_template('index.html')  # Render HTML-filen 'index.html'.
+    return render_template('index.html')  # Render HTML-filen 
 
 @app.route('/Insert.html')
 def insert():
-    return render_template('Insert.html')
+    return render_template('Insert.html')# Render HTML-filen 
 
 @app.route('/Varer.html')
 def varer():
-    return render_template('Varer.html')
+    return render_template('Varer.html')# Render HTML-filen 
 
-@app.route('/search.html')  # Definerer en rute for '/search.html'.
+@app.route('/search.html')  # Definerer en filen
 def search():
     return render_template('search.html')  # Render HTML-filen 'search.html'.
 

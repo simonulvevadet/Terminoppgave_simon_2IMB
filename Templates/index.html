@@ -1,55 +1,49 @@
 <!DOCTYPE html>
 <html lang="no">
 
-
-
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- Angir tegnsettet som UTF-8 for å støtte spesialtegn. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sykkelverksted System</title>
-    <link rel="stylesheet" href="Styles.css">
+    <!-- Gjør siden responsiv for ulike skjermstørrelser. -->
+    <title>Sykkelverksted System</title> <!-- Tittelen som vises i nettleserfanen. -->
+    <link rel="stylesheet" href="Styles.css"> <!-- Kobler til en ekstern CSS-fil. -->
 </head>
 
 <body>
-    <header> 
-        <h1>Velkommen til mitt verksted System</h1>
-        <nav>
-        <ul>
-            <li><a href="/" class="button-89" role="button"><p class="youarehere">Hjem</p></a></li>
-            <li><a href="Insert.html" class="button-89" role="button">Legg til varer</a></li>
-            <li><a href="Varer.html" class="button-89" role="button">Se varer</a></li>
-            <li><a href="search.html" class="button-89" role="button">Søk</a></li>
-        </ul>
-    </nav></header>
+    <header>
+        <h1>Velkommen til mitt verksted System</h1> <!-- Hovedoverskrift på siden. -->
+        <nav> <!-- Navigasjonsmeny -->
+            <ul>
+                <li><a href="/" class="button-89" role="button">
+                        <p class="youarehere">Hjem</p>
+                    </a></li> <!-- Hjem-knapp med markering for aktiv side. -->
+                <li><a href="Insert.html" class="button-89" role="button">Legg til varer</a></li>
+                <!-- Lenke til siden for å legge til varer. -->
+                <li><a href="Varer.html" class="button-89" role="button">Se varer</a></li>
+                <!-- Lenke til siden for å se varer. -->
+                <li><a href="search.html" class="button-89" role="button">Søk</a></li> <!-- Lenke til søkesiden. -->
+            </ul>
+        </nav>
+    </header>
 
-    <form id="repairForm">
-        <label for="mechanic">Mekaniker-ID:</label>
-        <input type="text" id="mechanic" name="mechanic_id" required>
+    <form id="repairForm"> <!-- Skjema for å legge til reparasjoner. -->
+        <label for="mechanic">Mekaniker-ID:</label> <!-- Etikett for mekaniker-ID. -->
+        <input type="text" id="mechanic" name="mechanic_id" required> <!-- Inputfelt for mekaniker-ID, påkrevd. -->
 
-        <label for="description">Beskrivelse:</label>
-        <input type="text" id="description" name="description" required>
+        <label for="description">Beskrivelse:</label> <!-- Etikett for beskrivelse. -->
+        <input type="text" id="description" name="description" required> <!-- Inputfelt for beskrivelse, påkrevd. -->
 
-        <label for="totalPrice">Totalpris:</label>
-        <input type="number" id="totalPrice" name="total_price" required>
-        <button type="submit">Legg til Reparasjon</button>
+        <label for="totalPrice">Totalpris:</label> <!-- Etikett for totalpris. -->
+        <input type="number" id="totalPrice" name="total_price" required> <!-- Inputfelt for totalpris, påkrevd. -->
+        <button type="submit">Legg til Reparasjon</button> <!-- Knapp for å sende inn skjemaet. -->
     </form>
 
-
-    
-
-        <div id="repairs">
-            <h2>Liste over reparasjoner</h2>
-            <!-- Reparasjoner og slett-knapper blir dynamisk lagt til her -->
-        </div>
-
+    <div id="repairs">
+        <h2>Liste over reparasjoner</h2> <!-- Underoverskrift for reparasjonslisten. -->
+        <!-- Reparasjoner og slett-knapper blir dynamisk lagt til her -->
     </div>
 
-
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Kobler til en ekstern JavaScript-fil. -->
 </body>
-
-
-
-
 
 </html>

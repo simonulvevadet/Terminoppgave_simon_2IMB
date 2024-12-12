@@ -57,65 +57,65 @@ button:hover {
 
 /* Button-89 styles */
 .button-89 {
-  --b: 3px; /* border thickness */
-  --s: 0.45em; /* size of the corner */
-  --color: #f08c3b;
+  --b: 3px; /* Tykkelsen på knappekanten. */
+  --s: 0.45em; /* Størrelsen på hjørnet. */
+  --color: #f08c3b; /* Setter knappens hovedfarge. */
 
-  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
-  color: var(--color);
-  --_p: var(--s);
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s)); /* Justerer knappens indre polstring. */
+  color: var(--color); /* Setter knappetekstfargen til oransje. */
+  --_p: var(--s); /* Bruker hjørnestørrelsen som padding. */
   background: conic-gradient(
       from 90deg at var(--b) var(--b),
       #0000 90deg,
       var(--color) 0
     )
     var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
-    calc(100% - var(--b) - 2 * var(--_p));
-  transition: 0.3s linear, color 0s, background-color 0s;
-  outline: var(--b) solid #0000;
-  outline-offset: 0.6em;
-  font-size: 16px;
-  text-decoration: none; /* Remove underline for links */
-  display: inline-block; /* Ensure proper spacing in inline elements */
-
-  border: 0;
-
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    calc(100% - var(--b) - 2 * var(--_p)); /* Setter gradient-bakgrunn på knappen. */
+  transition: 0.3s linear, color 0s, background-color 0s; /* Gir jevne overganger. */
+  outline: var(--b) solid #0000; /* Initialiserer omrisset som usynlig. */
+  outline-offset: 0.6em; /* Angir avstand for omrisset. */
+  font-size: 16px; /* Setter skriftstørrelsen til 16px. */
+  text-decoration: none; /* Fjerner understrek for lenker. */
+  display: inline-block; /* Sikrer riktig spacing i inline elementer. */
+  border: 0; /* Fjerner standard knappkant. */
+  user-select: none; /* Hindrer tekstvalg i knappen. */
+  -webkit-user-select: none; /* Sikrer kompatibilitet i nettlesere. */
+  touch-action: manipulation; /* Optimaliserer for berøringsskjermer. */
 }
 
 .button-89:hover,
 .button-89:focus-visible {
-  --_p: 0px;
-  outline-color: var(--color);
-  outline-offset: 0.05em;
+  --_p: 0px; /* Fjerner padding ved hover eller fokus. */
+  outline-color: var(
+    --color
+  ); /* Endrer omrissets farge til knappens hovedfarge. */
+  outline-offset: 0.05em; /* Reduserer avstanden for omrisset. */
 }
 
 .button-89:active {
-  background: var(--color);
-  color: #fff;
+  background: var(--color); /* Endrer bakgrunnsfargen ved klikk. */
+  color: #fff; /* Gjør teksten hvit ved klikk. */
 }
 
-/* Optional: Style the list to match button layout */
+/* Valgfritt: Stil for listeelementer i navigasjon */
 nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1em;
+  list-style-type: none; /* Fjerner punktliste-symboler. */
+  padding: 0; /* Fjerner innvendig avstand for listen. */
+  margin: 0; /* Fjerner utvendig avstand for listen. */
+  display: flex; /* Viser listeelementene horisontalt. */
+  gap: 1em; /* Legger til mellomrom mellom listeelementene. */
 }
 
 nav li {
-  display: inline;
+  display: inline; /* Viser hvert listeelement på én linje. */
 }
 
-.button-89{
-    color: #1a1a1a;
-    font-family:serif ;
+.button-89 {
+  color: #1a1a1a; /* Endrer knappetekstfargen til mørk grå. */
+  font-family: serif; /* Setter knappens font til serif. */
 }
 
-.youarehere{
-    font-family: serif;
-    color: #f08c3b;
+.youarehere {
+  font-family: serif; /* Bruker serif-font for 'youarehere'-klassen. */
+  color: #f08c3b; /* Setter fargen til oransje for å indikere gjeldende posisjon. */
 }
