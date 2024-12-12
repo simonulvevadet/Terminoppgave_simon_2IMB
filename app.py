@@ -1,6 +1,10 @@
 # app.py (Flask backend)
 from flask import Flask, jsonify, request, render_template  # Importerer nødvendige Flask-moduler for å lage API-et og håndtere forespørsler.
 import mysql.connector  # Importerer MySQL-modulen for databaseforbindelse.
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)  # This will enable CORS for all routes
 
 app = Flask(__name__,
             static_url_path='',  # Setter standard statisk URL-bane.
