@@ -1,4 +1,4 @@
-Her er svarene på spørsmålene dine skrevet som et markdown-dokument:  
+
 
 ```markdown
 # Spørsmål og Svar: Programmeringsoppgaver

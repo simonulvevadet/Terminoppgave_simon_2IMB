@@ -1,6 +1,6 @@
 # Introduksjon til prosjektet mitt
 
-Hei Anders og Erik , 
+
 
 Jeg vil gjerne introdusere dere for mitt prosjekt, som har sitt utspring fra en tidligere jobb jeg hadde som mekaniker på et sykkelverksted i byen. Etter hver reparasjon måtte vi dokumentere hva som ble gjort, hvem som jobbet på oppdraget, og hva det kostet. Dessverre var systemet vi brukte både tungvint og lite brukervennlig, noe som førte til frustrasjon i hverdagen.
 
@@ -141,4 +141,3 @@ Denne prosessen beskriver hvordan en reparasjon blir lagt til i systemet og dere
 4. Reparasjonslisten oppdateres ved å hente data fra serveren og vise dem i frontend.
 ```
 
-Dette formatet inkluderer de originale linjenumrene og gir en klar oversikt over hele prosessen. Klar for kopiering til VS Code. 😊
